@@ -1,14 +1,13 @@
+// Dependencies
+// =============================================================
+var path = require("path");
+
 var db = require("../models");
 
 module.exports = function(app) {
     // Load index page
     app.get("/", function(req, res) {
-        db.Example.findAll({}).then(function(dbExamples) {
-            res.render("survey", {
-                msg: "Welcome!",
-                examples: dbExamples
-            });
-        });
+        res.render("index", {})
     });
 
     // Load example page and pass in an example by id

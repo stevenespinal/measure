@@ -1,2 +1,2 @@
-DROP DATABASE IF EXISTS mentors;
-CREATE DATABASE mentors;
+DROP DATABASE IF EXISTS user_mentor;
+CREATE DATABASE user_mentor;
