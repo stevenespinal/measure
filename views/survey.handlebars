@@ -1,19 +1,165 @@
- <div id="create-survey" class='col-6 mt-5'>
-        <form id="create-survey-form">
-          <h2>Create Survey</h2>
-          <h5 id="create-survey-message"></h5>
-          <p>
-          <input type="text" name="survey[title]" placeholder="Survey Question" class="form-control">
-          <input type="text" name="survey[option1]" class="form-control mt-2" placeholder="Answer option 1" required>
-          <input type="text" name="survey[option2]" class="form-control mt-2" placeholder="Answer option 2" required>
-          <input type="text" name="survey[option3]" class="form-control mt-2" placeholder="Answer option 3">
-          <input type="text" name="survey[option4]" class="form-control mt-2" placeholder="Answer option 4">
-          <input type="text" name="survey[option5]" class="form-control mt-2" placeholder="Answer option 5">
-          </p>
-          <button type="button" id="back-button" class="btn btn-secondary">Back</button>
-          <button type="submit" id="create-new-survey-button" class="btn btn-info submit">Create</button>
-        </form>
-      </div>
-      <div id="show-surveys-area"></div>
-  </section>
+{{!--  
+    <div class="container">
+        <i class="fa fa-times"></i>
+        <div class="inline-header">
+            <div class="inline-modal-errors new-error">Please take a few moments to answer the below questions so that we can match you up with a mentor that could best assist you.
 </div>
+          <div class="inline-modal-hide-h1 center h1" style="padding-top: 1em;">What areas of your life do you need guidance with?</div>
+            <hr class="inline-modal-hide-hr">
+        </div>
+        <div id="inlineModalContent">
+            <div class="inline-main-content">
+                <div id="question-0" class="modal-question" style="display: block;">
+                    <div class="inline-q-checkbox can-highlight inline-q new-project-field" style=""><input
+                            id="custom_question_checkbox" type="checkbox" class="inline-checkbox"
+                            name="mentor-type"><label class="inline-q-label"
+                            for="custom_question_checkbox" value = "1">Relationships</label></div>
+                    <div class="inline-q-checkbox can-highlight inline-q new-project-field" style=""><input
+                            id="custom_question_checkbox" type="checkbox" class="inline-checkbox"
+                            name="mentor-type"><label class="inline-q-label"
+                            for="custom_question_checkbox" value = "2">Leadership</label></div>
+                    <div class="inline-q-checkbox can-highlight inline-q new-project-field" style=""><input
+                            id="custom_question_checkbox" type="checkbox" class="inline-checkbox"
+                            name="mentor-type"><label class="inline-q-label"
+                            for="custom_question_checkbox" value = "3">Anxiety & Stress Management</label></div>
+                    <div class="inline-q-checkbox can-highlight inline-q new-project-field" style=""><input
+                            id="custom_question_checkbox" type="checkbox" class="inline-checkbox"
+                            name="mentor-type"><label class="inline-q-label"
+                            for="custom_question_checkbox" value = "5">Misc. life coaching</label></div>
+    
+                </div>
+            </div>
+        </div>
+
+
+        <div class="inline-buttons-container inline-buttons-container-questions">
+                <button class="inline-bark-btn-back btn-secondary">BACK</button>
+                <button class="inline-bark-btn-continue btn-info ">NEXT</button>
+            </div>
+
+        <div class="container">
+        <i class="fa fa-times"></i>
+        <div class="inline-header">
+            <div class="inline-modal-hide-h1 center h1" style="padding-top: 1em;">Do you feel most comfortable with a..??</div>
+        </div>
+        <div id="inlineModalContent">
+            <div class="inline-main-content">
+                <div id="question-0" class="modal-question" style="display: block;">
+                    <div class="inline-q-checkbox can-highlight inline-q new-project-field" style=""><input
+                            id="custom_question_checkbox" type="checkbox" class="inline-checkbox"
+                            name="mentor-type"><label class="inline-q-label"
+                            for="custom_question_checkbox" value = "1">Male Mentor</label></div>
+                    <div class="inline-q-checkbox can-highlight inline-q new-project-field" style=""><input
+                            id="custom_question_checkbox" type="checkbox" class="inline-checkbox"
+                            name="mentor-type"><label class="inline-q-label"
+                            for="custom_question_checkbox" value = "2">Female Mentor</label></div>
+                    <div class="inline-q-checkbox can-highlight inline-q new-project-field" style=""><input
+                            id="custom_question_checkbox" type="checkbox" class="inline-checkbox"
+                            name="mentor-type"><label class="inline-q-label"
+                            for="custom_question_checkbox" value = "3">Non-binary Mentor</label></div>
+    <div class="inline-buttons-container inline-buttons-container-questions">
+                <button class="inline-bark-btn-back btn-secondary">BACK</button>
+                <button class="inline-bark-btn-continue btn-info">NEXT</button>
+            </div>
+                </div>
+            </div>
+        </div>
+
+         <div class="container"></div>
+        <i class="fa fa-times"></i>
+        <div class="inline-header">
+            <div class="inline-modal-hide-h1 center h1" style="padding-top: 1em;">How would you prefer to communicate with your mentor/mentee?</div>
+            <hr class="inline-modal-hide-hr">
+        </div>
+        <div id="inlineModalContent">
+            <div class="inline-main-content">
+                <div id="question-0" class="modal-question" style="display: block;">
+                    <div class="inline-q-checkbox can-highlight inline-q new-project-field" style=""><input
+                            id="custom_question_checkbox" type="checkbox" class="inline-checkbox"
+                            name="mentor-type"><label class="inline-q-label"
+                            for="custom_question_checkbox" value = "1">Skype -Enter your skype Id?</label></div>
+                    <div class="inline-q-checkbox can-highlight inline-q new-project-field" style=""><input
+                            id="custom_question_checkbox" type="checkbox" class="inline-checkbox"
+                            name="mentor-type"><label class="inline-q-label"
+                            for="custom_question_checkbox" value = "2">Phone - Enter your phone number?
+</label></div>
+                    <div class="inline-q-checkbox can-highlight inline-q new-project-field" style=""><input
+                            id="custom_question_checkbox" type="checkbox" class="inline-checkbox"
+                            name="mentor-type"><label class="inline-q-label"
+                            for="custom_question_checkbox" value = "3">Email - Enter your email-address?</label></div>
+                    
+                <button class="inline-bark-btn-back btn-secondary">BACK</button>
+                <button class="inline-bark-btn-continue btn-info">NEXT</button>
+            </div>
+     
+</div>
+</div>
+</div> --}}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="inline-modal-errors new-error">
+                Please take a few moments to answer the below questions so that we can match you up with a mentor that could best assist you.
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div id="surveyQuestions">
+
+            </div>
+            <div id="surveyChoices">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    var survey = [
+    {
+    question: "What areas of your life do you need guidance with?",
+    choices: ["Relationships", "Leadership", "Mental Health"]
+    },
+    {
+    question: "Do you feel most comfortable with a..??",
+    choices: ["Male Mentor","Female Mentor"]
+
+    },
+    {
+    question: "How would you prefer to communicate with your mentor/mentee?",   
+    choices: ["Email-Enter your email id?", "Phone-Enter your phone number?"]
+    }];
+function displaySurvey() {
+    let surveyQuestions = $("#surveyQuestions");
+    
+    // $("#surveyQuestions").html(survey[i].question) 
+    for ( let i=0; i< survey.length; i++) {
+        let surveyChoices = survey[i].choices.length;
+        let questions = survey[i].question;
+        console.log(questions)
+        var question = $("<div>");
+     question = (`<h3>${questions}</h3>`);
+        for (let j=0; j<surveyChoices; j++) {
+            question += `
+            <ul><li>
+                <label class="inline-q-label" for="mentor-type" value="1"></label>
+                <input id="mentor-type" type="radio" class="inline-checkbox" name="mentor-type"> ${survey[i].choices[j]}
+               
+                </li></ul>`
+     }
+     question += `<button class="inline-bark-btn-back btn-secondary">BACK</button>
+                <button class="inline-bark-btn-continue btn-info">NEXT</button>`
+        surveyQuestions.append(question);
+        
+
+    }
+}
+displaySurvey();
+</script>
+
+
+
+
+
+
