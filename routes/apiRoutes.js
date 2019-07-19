@@ -22,4 +22,14 @@ module.exports = function(app) {
         });
     });
 
+    // Post mentors data to the database
+    app.get("/api/mentors/seeds", function(req, res) {
+
+        db.Mentor.bulkCreate(mentorSeeds)
+            .then(function(response) {
+                console.log(response);
+                res.json(response);
+            });
+    });
+
 };
