@@ -6,6 +6,21 @@ button {
     width: 100px;
 }
 
+p {
+    font-size: 24px;
+}
+
 ul li {
     list-style-type: none;
+    text-align: center;
+    font-size: 32px;
+}
+
+.butn:hover {
+    cursor: pointer;
+}
+
+.paragraph {
+    font-size: 18px;
+    font-weight: bold;
 }
