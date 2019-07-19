@@ -1,34 +1,82 @@
-<div id="home">
-  <div class="container">
-    <div class="row">
-      <div class="col-8 offset-2">
-        <h1>{{msg}}</h1>
-        <h2>This is our Home Page!</h2>
-        <form class="clearfix mb-4" action="POST">
-          <div class="form-group">
-            <label for="example-text">Example Text</label>
-            <input type="text" id="example-text" class="form-control" aria-describedby="example-text" placeholder="Enter Example Text">
-          </div>
-          <div class="form-group">
-            <label for="example-description">Example Description</label>
-            <textarea class="form-control" id="example-description" aria-describedby="example-description" placeholder="Enter Example Description"></textarea>
-          </div>
-          <button id="submit" class="btn btn-primary float-right">Submit</button>
-        </form>
-        <h3>Examples:</h3>
-        <ul id="example-list" class="list-group">
-          {{#each examples}}
-          <li data-id="{{this.id}}" class="list-group-item">
-            <a href="example/{{this.id}}">{{this.text}}</a>
-            <button class="btn btn-danger float-right delete">ｘ</button>
-          </li>
-          {{/each}}
-        </ul>
-        <a id="Setmore_button_iframe" style="float:none; position: fixed; right: -2px; top: 25%; display: block; z-index: 20000" href="https://my.setmore.com/bookingpage/7dd80068-e7d1-448c-a2f6-4d4fbbb9bb48"><img border="none" src="https://my.setmore.com/webapp/images/bookappt/Setmore-Book-Now.png" alt="Book an appointment with Measure using SetMore" /></a>
-      </div>
-    </div>
-  </div>
-</div>
+ <div class="container-fluid">
 
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="/js/index.js"></script>
+      <!-- NAVIGATION -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="nav-menu-container">
+        <div class="container">
+          <a class="navbar-brand js-scroll-trigger" href="#page-top">MEASURE</a>
+          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            Menu
+            <i class="fas fa-bars"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto nav-menu">
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger menu-active" href="#sign-in">Sign In</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+  
+      <!-- MAIN -->
+          <header class="masthead">
+              <div class="container h-100 d-inline">
+                <div class="row h-100">
+                  <div class="col-md-8 my-auto">
+                      <img src="../public/assets/images/greenery.png" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-md-4 my-auto">
+                      <h2 class="mb-5 intro">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit, adipisicing eli </h2>
+                      <!-- <a href="#survey" class="btn btn-outline btn-xl js-scroll-trigger">Get Started</a> -->
+                      <div class="row">
+                        <div class="col-md-4 my-auto">
+                            <div class="hero-container">          
+                                <a href="#survey" class="btn btn-get-started btn-outline-secondary btn-lg">Get Started</a>
+                            </div>
+                        </div>
+                      </div>
+                      <!-- <section id="hero">
+                          <div class="hero-container">          
+                              <a href="#survey" class="btn btn-get-started btn-outline btn-xl js-scroll-trigger">Get Started</a>
+                          </div>
+                      </section> -->
+                    </div>
+                  </div>
+                  <br><br>
+                  <!-- <div class="row">
+                    <div class="col-lg-5 my-auto">
+                        <section id="hero">
+                            <div class="hero-container">          
+                                <a href="#survey" class="btn-get-started">Get Started</a>
+                            </div>
+                        </section>
+
+                  </div>
+                </div> -->
+              </div>
+            </header>
+  </div>
+<br><br>
+  <footer class="footer mt-auto py-3">
+      <div class="container">
+        <span class="copyright text-muted"> &copy; Copyright 2019</span>
+      </div>
+    </footer>
+      <!-- <div class="footer-top">
+          <div class="container">
+
+          </div>
+      </div> -->
+
+      <!-- <div class="container text-center">
+          <div class="copyright">
+              &copy; Copyright 2019
+          </div>
+      </div> 
+  </footer> -->
