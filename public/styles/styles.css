@@ -321,7 +321,7 @@ ul li {
 
 #contact .info i {
   font-size: 32px;
-  color: #BF9DF5;
+  color: #bedd82;
   float: left;
 }
 
@@ -355,12 +355,12 @@ ul li {
 }
 
 #contact .social-links a:hover {
-  background: #C560FF;
+  background: #bedd82;
   color: #fff;
 }
 
 #contact .form #sendmessage {
-  color: #C560FF;
+  color: #bedd82;
   border: 1px solid #C560FF;
   display: none;
   text-align: center;
@@ -402,7 +402,7 @@ ul li {
 
 #contact .form button[type="submit"] {
   /* background: #C560FF; */
-  background: #BF9DF5;
+  background: #bedd82;
   border: 0;
   padding: 10px 24px;
   color: #fff;
@@ -410,5 +410,12 @@ ul li {
 }
 
 #contact .form button[type="submit"]:hover {
-  background: #C560FF;
+  background: green;
+}
+p a {
+  color: gray;
+}
+
+p a:hover {
+  color: green;
 }
