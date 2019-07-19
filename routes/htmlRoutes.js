@@ -30,6 +30,12 @@ module.exports = function(app) {
             example: "hi"
         });
     });
+
+    app.get("/sign-in", function(req, res) {
+        res.render("sign-in", {
+            example: "hi"
+        });
+    });
     // Render 404 page for any unmatched routes
     app.get("*", function(req, res) {
         res.render("404");
