@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="col-8 offset-2">
-      <div class="card mt-4">
+      <div class="card mt-4"> 
         <div class="card-body">
           <h5 class="card-title">Example</h5>
           <p>
@@ -12,8 +12,55 @@
           <p>
             <strong>Description:</strong> {{example.description}}</p>
             <a href="/">← Back To Home</a>
+            <button class="btn-info" id="click" style="width: 100%; padding: 20px;">See More</button> 
+            <div id="target">
+
+            </div>
         </div>
       </div>
     </div>
   </div>
 </div>
+
+
+<script id="setmore_script" type="text/javascript" src="https://my.setmore.com/webapp/js/src/others/setmore_iframe.js"></script><a id="Setmore_button_iframe" style="float:none; position: fixed; right: -2px; top: 25%; display: block; z-index: 20000" href="https://my.setmore.com/bookingpage/7dd80068-e7d1-448c-a2f6-4d4fbbb9bb48"><img border="none" src="https://my.setmore.com/webapp/images/bookappt/Setmore-Book-Now.png" alt="Book an appointment with Measure using SetMore" /></a>
+</script>
+
+<script>
+  var apiKey = "r1/24ec1a26aeZA8EfoFfGXddEbZQSYwzxA0dgJypqkkcXTk";
+  const queryURL = "https://developer.setmore.com/api/v1/o/oauth2/token?refreshToken=" + apiKey;
+  $.ajax({
+    url: queryURL,
+    method: "GET"
+  })
+  .then(function(response) {
+    console.log(response.data.token.access_token);
+    let accessToken = response.data.token.access_token;
+    $.ajax({
+      headers: {
+        'Authorization': `Bearer ${accessToken}`
+      },
+    url: "https://developer.setmore.com/api/v1/bookingapi/services/categories",
+    //  url: "https://developer.setmore.com/api/v1/bookingapi/customer?firstname=Testing&email=lmfaoyoumad97@gmail.com",
+      method: "GET"
+    }).then(function(res) {
+      console.log(res);
+  $("#click").on("click", function() {
+    // let targetDiv = $("#target");
+      let data;
+      let targetDiv = $("#target");
+      targetDiv.empty();
+      for (let i =0; i <res.data.service_categories.length; i++ ) {
+        data = res.data.service_categories[i];
+      targetDiv.append(`
+     <p class='examplep'> Key ${parseInt([i]) + 1}: <span class='examplespan'>${data.key}</span></p>
+      <p class='examplep'>Category Name: <span class='examplespan'>${data.categoryName}</span></p>
+      `);
+      }
+     
+  })
+    })
+  })
+
+
+</script>
