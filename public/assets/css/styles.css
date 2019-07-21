@@ -363,6 +363,7 @@ ul li {
   color: #bedd82;
   border: 1px solid #C560FF;
   display: none;
+  background-color: black;
   text-align: center;
   padding: 15px;
   font-weight: 600;
@@ -635,4 +636,16 @@ p a:hover {
 .btn-facebook {
   color: white;
   background-color: #3b5998;
+}
+
+
+.examplep {
+  font-size: 40px;
+  color: red;
+  background-color: black;
+  padding: 20px;
+}
+
+.examplespan {
+  color: white;
 }

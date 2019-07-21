@@ -11,10 +11,10 @@
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto nav-menu">
               <li class="nav-item">
-                <a class="nav-link js-scroll-trigger menu-active" href="#sign-in">Sign In</a>
+                <a class="nav-link js-scroll-trigger menu-active" href="/sign-in">Sign In</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="#about">About</a>
+                <a class="nav-link js-scroll-trigger" href="/about">About</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link js-scroll-trigger" href="/contact">Contact</a>
@@ -51,7 +51,7 @@
 
                             <div>
                                 <i class="fa fa-phone"></i>
-                                <p>(212) 555-5555</p>
+                                <p><a href="tel:1-212-555-5555">(212) 555-5555</a></p>
                             </div>
                         </div>
 
@@ -86,7 +86,7 @@
                                     <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
                                     <div class="validation"></div>
                                 </div>
-                                <div class="text-center"><button type="submit" style="width: auto;">Send Message</button></div>
+                                <div class="text-center"><button id="submit" type="submit" style="width: auto;">Send Message</button></div>
                             </form>
                         </div>
                     </div>
@@ -99,3 +99,11 @@
 
 </div>
 
+
+<script>
+    $("#submit").on("click", function(e) {
+        e.preventDefault();
+        let messagePopup = $("#sendmessage");
+        messagePopup.attr("style", "display: block");
+    })
+</script>
