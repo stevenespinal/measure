@@ -1,2 +1,14 @@
-DROP DATABASE IF EXISTS mentors;
-CREATE DATABASE mentors;
+DROP DATABASE IF EXISTS mentorDB;
+
+CREATE DATABASE mentorDB;
+
+USE mentorDB;
+
+CREATE TABLE mentors (
+  id INT NOT NULL AUTO_INCREMENT,
+  mentorName VARCHAR(45) NULL,
+  bio TEXT NULL,
+  phone TEXT NULL,
+  email TEXT(45) NULL,
+  PRIMARY KEY (id)
+);
