@@ -55,7 +55,16 @@ body {
   #hero {
       background-attachment: fixed;
   }
-} 
+  .menu {
+    margin-top: 200px;
+  }
+}
+
+@media screen and (min-width: 724px) {
+  .menu {
+    margin-top: 200px;
+  }
+}
 /* 
 #hero:before {
   content: "";
@@ -199,6 +208,9 @@ body {
 @media (max-width: 768px) {
   #nav-menu-container {
       display: block;
+  }
+  .menu {
+    margin-top: 200px;
   }
 } 
 
