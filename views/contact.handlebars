@@ -101,11 +101,12 @@
 
 
 <script>
+        let messagePopup = $("#sendmessage");
     $("#submit").on("click", function(e) {
         e.preventDefault();
-        let messagePopup = $("#sendmessage");
         messagePopup.attr("style", "display: block");
         resetForm();
+        setTimeout(removePopup, 3000)
     })
 
     function resetForm() {
@@ -113,5 +114,9 @@
         $("#email").val("");
         $("#subject").val("");
         $("#message").val("");
+    }
+    function removePopup() {
+        messagePopup.attr("style", "display: none");
+
     }
 </script>
