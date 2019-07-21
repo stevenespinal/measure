@@ -50,21 +50,6 @@ body {
   background-size: cover;
   position: relative; */
 }
-
-@media (min-width: 1024px) {
-  #hero {
-      background-attachment: fixed;
-  }
-  .menu {
-    margin-top: 200px;
-  }
-}
-
-@media screen and (min-width: 724px) {
-  .menu {
-    margin-top: 200px;
-  }
-}
 /* 
 #hero:before {
   content: "";
@@ -98,27 +83,11 @@ body {
   text-transform: uppercase;
   /* color: darkgray; */
 }
-
-@media (max-width: 768px) {
-  #hero h1 {
-      font-size: 28px;
-      line-height: 36px;
-  }
-} 
-
  #hero h2 {
   /* color: darkgray; */
   margin-bottom: 50px;
   font-size: 24px;
 }
-
-@media (max-width: 768px) {
-  #hero h2 {
-      font-size: 18px;
-      line-height: 24px;
-      margin-bottom: 30px;
-  }
-} 
 
 #hero .btn-get-started {
   font-family: "Poppins", sans-serif;
@@ -204,15 +173,6 @@ body {
   float: right;
   margin: 0;
 }
-
-@media (max-width: 768px) {
-  #nav-menu-container {
-      display: block;
-  }
-  .menu {
-    margin-top: 200px;
-  }
-} 
 
 /* Nav Meu Styling */
 
@@ -320,6 +280,7 @@ ul li {
 #contact {
   background: #f7f7f7;
   padding: 80px 0 40px 0;
+  margin-top: 100px;
 }
 
 #contact #google-map {
@@ -660,4 +621,76 @@ p a:hover {
 
 .examplespan {
   color: white;
+}
+
+.survey {
+  margin-top: 100px;
+}
+
+
+
+@media (min-width: 1024px) {
+  #hero {
+      background-attachment: fixed;
+  }
+  .menu {
+    margin-top: 200px;
+  }
+  .survey {
+    margin-top: 100px;
+  }
+}
+
+@media screen and (min-width: 724px) {
+  .menu {
+    margin-top: 200px;
+  }
+}
+
+@media screen and (max-width: 724px) {
+  .survey {
+    margin-top: 250px;
+  }
+  
+}
+
+@media (max-width: 768px) {
+  #hero h1 {
+      font-size: 28px;
+      line-height: 36px;
+  }
+} 
+
+
+@media (max-width: 768px) {
+  #hero h2 {
+      font-size: 18px;
+      line-height: 24px;
+      margin-bottom: 30px;
+  }
+  .survey {
+    margin-top: 250px;
+  }
+} 
+
+@media (max-width: 768px) {
+  #nav-menu-container {
+      display: block;
+  }
+  .menu {
+    margin-top: 200px;
+  }
+} 
+
+@media screen and (max-width: 991px) {
+  .survey {
+    margin-top: 225px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  
+  #contact {
+    margin-top: 225px;
+  }
 }
