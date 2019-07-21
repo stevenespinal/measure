@@ -1,0 +1,87 @@
+<div class="container">
+    
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="nav-menu-container">
+        <div class="container">
+          <a class="navbar-brand js-scroll-trigger" href="/">MEASURE</a>
+          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            Menu
+            <i class="fa fa-bars"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto nav-menu">
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger menu-active" href="/sign-in">Sign In</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="/about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="/contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+    <div class="content-container about">
+        <div class="row">
+            <div class="col-md-12 jumbotron bg-dark" id="title-header">
+                <h1 id="jumboHeader">Meausre is one of the largest e‑counseling platforms</h1>
+            </div>
+
+        </div>
+        <div class="row about-boxes mobile-push">
+            <div class="col-sm-12 box">
+                <div id="about-us">
+                    <h3 class="arvo">About us</h3>
+                    <div class="col-sm-12 center" data-aos="zoom-in-up">
+                        <p class="dosis">Measure is designed for people of all ages to help deal with anxiety. Rather than trying to
+                            avoid anxious feelings, Measure stresses the importance of changing how you think about
+                            anxiety. Think of Measure as your cheerleader,
+                            encouraging you to take charge of your life, ride out intense emotions, face challenging
+                            situations, develop self-awareness and healthy attitudes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row about-boxes mobile-push">
+            <div class="col-sm-12 box">
+                <div id="our-mission">
+                    <h3 class="arvo">Our Mission</h3>
+                    <div class="col-sm-12 center" data-aos="zoom-in-left">
+                        <p class="dosis">Making professional counseling accessible, affordable, convenient - so anyone who struggles
+                            with life’s challenges can get help, anytime, anywhere.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="row about-boxes">
+    <div class="col-sm-12">
+        <div id="our-counselors">
+            <h3 class="arvo">Our Counselors</h3>
+            <div class="row">
+                <div class="offset-sm-2 col-sm-8" data-aos="zoom-in-right">
+                    <p class="center dosis">Measure offers access to licensed, trained, experienced, and accredited
+                        psychologists (PhD / PsyD), marriage and family therapists (LMFT), clinical social workers (LCSW
+                        / LMSW), and board licensed professional counselors (LPC).</p>
+                    <ul id="mentor-list" class="list-group">
+                        {{#each mentors}}
+                        <li data-id="{{this.id}}" class="list-group-item">
+                            <a href="mentor/{{this.id}}">{{this.text}}</a>
+                            <button class="btn btn-danger float-right delete">ｘ</button>
+                        </li>
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+  AOS.init();
+</script>
