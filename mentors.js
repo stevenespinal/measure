@@ -3,7 +3,7 @@ module.exports = [
     name: "Elizabeth Easley, APRN, BC, PMHCNS--BC",
     img: "https://hanatemplate.com/images/portrait-white-background-2.png",
     bio:
-      "Experienced Psychiatric Nurse with a history of working in the mental health field. Strong background in the delivery of psychiatric services including over thirty years of complex medication management. Highly skilled in all areas of mental health care including Mindfulness, Nursing Education, Crisis Intervention, Family, Individual and Group Therapy.",
+      "Highly skilled Psychiatric Nurse in all areas of mental health care including Mindfulness, Crisis Intervention, Family, Individual and Group Therapy.",
     phone: 555888888,
     email: "eeasley@measure.com",
     scores: [1, 2, 3, 4]
@@ -13,7 +13,7 @@ module.exports = [
     img:
       "https://i.pinimg.com/736x/f2/2a/1c/f22a1c37f47d47ae97ad8bed1b655340--professional-headshots-women-business-business-headshots.jpg",
     bio:
-      "Experienced Psychiatric Nurse with a Post-Master's Rush University, College of Nursing. Expert knowledge in anxiety disorders, chronic mental illness, mood disorders, psychotic disorders.",
+      "Experienced Psychiatric Nurse with a Post-Master's. Expert knowledge in anxiety disorders, chronic mental illness, mood disorders, psychotic disorders.",
     phone: 555888888,
     email: "vspitzer@measure.com",
     scores: [3, 2, 1, 4]
@@ -33,7 +33,7 @@ module.exports = [
     img:
       "https://media.istockphoto.com/photos/keep-smiling-picture-id509286952?k=6&m=509286952&s=612x612&w=0&h=_AhFLmy9aTE-ng8VSx_p92lJ6iRyr7u0OAwv30DzkAQ=",
     bio:
-      "Chief of the Mood Brain & Development Unit at the National Institute of Mental Health. Dr Stein's aim is to understand why some young people become more depressed than others and how to improve our understanding and treatment of depression.",
+      "Chief of the Mood Brain & Development Unit at the National Institute of Mental Health. Specializes in treatment of Depression",
     phone: 555888888,
     email: "jstein@measure.com",
     scores: [1, 1, 1, 1]
