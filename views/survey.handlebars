@@ -35,25 +35,175 @@
             <h1 class="text-center" style="margin-top: 30px;"><em>Connect with a mentor today!</em></h1>
             <hr style="margin-bottom: 20px">
  
-            <p id="question"></p>
- 
-            <div class="buttons">
-                <ul id="btn0" class="butn btn-warning" style="padding: 20px; width: auto;"><li id="choice0"></li></ul>
-                <ul id="btn1"  class="butn btn-info" style="padding: 20px; width: auto;"><li id="choice1"></li></ul>
-                <ul id="btn2"  class="butn btn-danger" style="padding: 20px; width: auto;"><li id="choice2"></li></ul>
-            </div>
- 
-            <hr style="margin-top: 50px">
-            <footer>
-                <p id="progress">Question x of y</p>
-            </footer>
+            {{!-- <p id="question"></p> --}}
+
+             <div id="surveyElement"></div>
+            <div id="surveyResult"></div>
+
+                    <hr style="margin-top: 50px">
+           
         </div>
     </div>
         </div>
     </div>
 </div>
 
-<script id="setmore_script" type="text/javascript" src="https://my.setmore.com/webapp/js/src/others/setmore_iframe.js"></script>
+<script type="text/javascript">
+
+        
+Survey
+.StylesManager
+.applyTheme("default");
+{{!-- .applyTheme("bootstrap"); --}}
+
+var json = {
+title: "Mentor Match",
+showProgressBar: "bottom",
+showQuestionNumbers: "off",
+firstPageIsStarted: true,
+startSurveyText: "Start Quiz",
+pages: [
+    {
+        questions: [
+            {
+                type: "html",
+                html: "Start the quiz to find your mentor."
+            }
+        ]
+    }, {
+        questions: [
+            {
+                type: "checkbox",
+                name: "question1",
+                title: "What areas of your life do you need guidance with?",
+                isRequired: true,
+                choices: [
+                    "Finances", "Leadership", "Mental Health", "Lifestyle"
+                ],
+            }
+        ]
+    }, {
+        questions: [
+            {
+                type: "checkbox",
+                name: "question2",
+                title: "What areas would you like to work on?",
+                isRequired: true,
+                choicesOrder: "random",
+                choices: [
+                    "Mindfullness Skills", "Interpersonal Effectiveness Skills", "Emotion Regulation Skills", "Distress Tolerance Skills",
+                ],
+            }
+        ]
+    }, {
+        questions: [
+            {
+                type: "checkbox",
+                name: "question3",
+                title: "What goals do you hope to achieve?",
+                isRequired: true,
+                choicesOrder: "random",
+                choices: [
+                "Stabalizing your thoughts", "Practice good coping skills", "Enhance self-confidence and self-love", "Experience reality as it is"
+                ],
+            }
+        ]
+    }, {
+    questions: [
+    {
+          type: "checkbox",
+          name: "question4",
+          title: "Which gender would you prefer your mentor to be?",
+          isRequired: true,
+          choicesOrder: "random",
+                choices: [
+                "Male", "Female", "Non-binary", "No preference"
+                ],
+                }
+            ]
+        }
+    ],
+    completedHtml: "<h4>Meet your matches</h4>"
+};
+
+
+{{!-- completedHtml: "<h4>Meet your matches</h4>" --}}
+{{!-- completedHtml: "<h4>Meet your matches</h4><script id=setmore_script type=text/javascript src=https://my.setmore.com/webapp/js/src/others/setmore_iframe.js></script><a id=Setmore_button_iframe style=float:none href=https://measure.setmore.com/bookingpage/7dd80068-e7d1-448c-a2f6-4d4fbbb9bb48><img border=none src=https://my.setmore.com/webapp/images/bookappt/SetMore-book-button.png alt=Book an appointment with Measure using SetMore /></a>"
+     --}}
+
+
+window.survey = new Survey.Model(json);
+
+
+survey
+.onComplete
+.add(function (result) {
+    document
+        .querySelector('#surveyResult')
+        .textContent = "Result JSON:\n" + JSON.stringify(result.data, null, 3);
+});
+
+
+$("#surveyElement").Survey({model: survey});;
+
+
+    $('#submit').on('click', function(event) {
+        event.preventDefault();
+        // Form validation
+        var valid = true;
+
+        if ($("#question1").val() === "empty" || $("#question2").val() === "empty" || $("#question3").val() === "empty" || $("#question4").val() === "empty" || $("#question5").val() === "empty" || $("#question6").val() === "empty" || $("#question7").val() === "empty" || $("#question8").val() === "empty" || $("#question9").val() === "empty" || $("#question10").val() === "empty") {
+            valid = false;
+        }
+        else if (valid === true) {
+            var newUser = {
+                scores: [
+                    $("#question1").val(),
+                    $("#question2").val(),
+                    $("#question3").val(),
+                    $("#question4").val()
+                
+                ]
+            };
+            var currentURL = window.location.origin;
+            // Ajax call for receiving response after POST req
+            $.post(currentURL + "/api/mentors", newUser,
+                function(data) {
+                    if (data) {
+
+                        $("#bffName").text(data.name);
+                        $("#bffImg").attr("src", data.photo);
+
+                        // Show modal
+                        $("#executeModal").modal("toggle");
+
+                        // Clear after submission
+                       
+                        $("#question1").val(""),
+                        $("#question2").val(""),
+                        $("#question3").val(""),
+                        $("#question4").val("")
+                         
+
+                    } else
+                    // If a required field is missing, show alert
+                        alert("Survey is incomplete!");
+
+                });
+        };
+    })
+
+        </script>
+ 
+            {{!-- <div class="buttons">
+                <ul id="btn0" class="butn btn-warning" style="padding: 20px; width: auto;"><li id="choice0"></li></ul>
+                <ul id="btn1"  class="butn btn-info" style="padding: 20px; width: auto;"><li id="choice1"></li></ul>
+                <ul id="btn2"  class="butn btn-danger" style="padding: 20px; width: auto;"><li id="choice2"></li></ul>
+            </div> --}}
+ 
+
+
+{{!-- <script id="setmore_script" type="text/javascript" src="https://my.setmore.com/webapp/js/src/others/setmore_iframe.js"></script>
 <a id="Setmore_button_iframe" style="float:none" href="https://measure.setmore.com/bookingpage/7dd80068-e7d1-448c-a2f6-4d4fbbb9bb48"><img border="none" src="https://my.setmore.com/webapp/images/bookappt/SetMore-book-button.png" alt="Book an appointment with Measure using SetMore" /></a>
 
 <script>
@@ -159,6 +309,6 @@ populate();
 
 
 
-
+ --}}
 
 
