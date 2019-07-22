@@ -629,7 +629,31 @@ p a:hover {
   margin-top: 100px;
 }
 
+.about {
+  margin-top: 100px;
+}
 
+#jumboHeader {
+  font-family: 'Playfair Display', serif;
+  color: #bedd82;
+}
+
+.arvo {
+  font-family: 'Arvo', serif;
+  font-size: 32px;
+  color: forestgreen;
+}
+
+.dosis {
+  font-family: 'Dosis', sans-serif;
+}
+
+.verify-email {
+  color: gray;
+}
+.verify-email:hover {
+  color: green;
+}
 
 @media (min-width: 1024px) {
   #hero {
@@ -641,6 +665,9 @@ p a:hover {
   .survey {
     margin-top: 100px;
   }
+  .about {
+    margin-top: 100px;
+  }
 }
 
 @media screen and (min-width: 724px) {
@@ -650,9 +677,10 @@ p a:hover {
 }
 
 @media screen and (max-width: 724px) {
-  .survey {
+  .survey, .about {
     margin-top: 250px;
   }
+ 
   
 }
 
@@ -670,7 +698,7 @@ p a:hover {
       line-height: 24px;
       margin-bottom: 30px;
   }
-  .survey {
+  .survey, .about{
     margin-top: 250px;
   }
 } 
@@ -685,13 +713,12 @@ p a:hover {
 } 
 
 @media screen and (max-width: 991px) {
-  .survey {
+  .survey, .about {
     margin-top: 225px;
   }
 }
 
 @media screen and (max-width: 991px) {
-  
   #contact {
     margin-top: 225px;
   }
