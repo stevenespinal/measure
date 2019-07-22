@@ -31,12 +31,14 @@
   text-align: center;
 } */
 
-body {
+body,
+p {
   font-family: "Poppins", sans-serif;
   text-transform: uppercase;
   text-align: center;
   /* background:  */
 }
+
 
 #nav-menu-container {
   float: right;
