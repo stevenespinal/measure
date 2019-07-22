@@ -8,7 +8,7 @@ module.exports = function(sequelize, DataTypes) {
       }
     },
     img: {
-      type: DataTypes.LONGBLOB,
+      type: DataTypes.BLOB,
       required: true
     },
     bio: {
