@@ -646,6 +646,13 @@ p a:hover {
   font-family: 'Dosis', sans-serif;
 }
 
+.verify-email {
+  color: gray;
+}
+.verify-email:hover {
+  color: green;
+}
+
 @media (min-width: 1024px) {
   #hero {
       background-attachment: fixed;
