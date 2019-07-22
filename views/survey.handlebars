@@ -32,13 +32,15 @@
         <div class="col-md-12">
            <div class="grid">
         <div id="quiz">
-            <h1 class="text-center" style="margin-top: 30px;"><em>Connect with a mentor today!</em></h1>
+            {{!-- <h1 class="text-center" style="margin-top: 30px;"><em>Connect with a mentor today!</em></h1> --}}
             <hr style="margin-bottom: 20px">
  
             {{!-- <p id="question"></p> --}}
 
              <div id="surveyElement"></div>
             <div id="surveyResult"></div>
+               
+          </div>
 
                     <hr style="margin-top: 50px">
            
@@ -128,27 +130,27 @@ pages: [
             ]
         }
     ],
-    completedHtml: "<h3>Meet Your Matches<h3>"
-
+    completedHtml: "<h3>Meet Your Matches<h3>\n          <div class=\"container mt-5\">\n              <div class=\"card-deck\">\n                  <div class=\"card\">\n                    <div class=\"card-body\">\n                      <h5 class=\"card-title\">Elizabeth Easley</h5>\n                      <p class=\"card-text\">APRN, BC, PMHCNS--BC.</p>\n                      <h6>Highly skilled Psychiatric Nurse in all areas of mental health care including Mindfulness, Crisis Intervention, Family, Individual and Group Therapy.</h6>\n                    </div>\n                    <div class=\"card-footer\">\n                        <a href=\"https://measure.setmore.com/resourcebookingpage/r6f171563760181786\" class=\"btn btn-primary\">Schedule</a>\n                    </div>\n                  </div>\n                  <div class=\"card\">\n                    <div class=\"card-body\">\n                      <h5 class=\"card-title\">Vicki Spitzer</h5>\n                      <p class=\"card-text\">MSN, ARNP, CNS</p>\n                      <h6>Experienced Psychiatric Nurse with a Post-Master's. Expert knowledge in anxiety disorders, chronic mental illness, mood disorders, psychotic disorders.</h6>\n                    </div>\n                    <div class=\"card-footer\">\n                      <a href=\"https://measure.setmore.com/resourcebookingpage/r772e1563760475845\"class=\"btn btn-primary\">Schedule</a>\n                    </div>\n                  </div>\n                  <div class=\"card\">\n                    <div class=\"card-body\">\n                      <h5 class=\"card-title\">Jeff Stein</h5>\n                      <p class=\"card-text\">MD, PhD, FRCPsych</p>\n                      <h6>Chief of the Mood Brain & Development Unit at the National Institute of Mental Health. Specializes in treatment of Depression</h6>\n                    </div>\n                    <div class=\"card-footer\">\n                      <a href=\"https://measure.setmore.com/resourcebookingpage/r77bd1563760562663\"class=\"btn btn-primary\">Schedule</a>\n                    </div>\n                  </div>\n                </div>\n\n          </div>",
 };
-
-
-{{!-- completedHtml: "<h4>Meet your matches</h4>" --}}
-{{!-- completedHtml: "<h4>Meet your matches</h4><script id=setmore_script type=text/javascript src=https://my.setmore.com/webapp/js/src/others/setmore_iframe.js></script><a id=Setmore_button_iframe style=float:none href=https://measure.setmore.com/bookingpage/7dd80068-e7d1-448c-a2f6-4d4fbbb9bb48><img border=none src=https://my.setmore.com/webapp/images/bookappt/SetMore-book-button.png alt=Book an appointment with Measure using SetMore /></a>"
-     --}}
 
 
 window.survey = new Survey.Model(json);
 
 
-survey
+{{!-- survey
 .onComplete
 .add(function (result) {
     document
         .querySelector('#surveyResult')
         .textContent = "Result JSON:\n" + JSON.stringify(result.data, null, 3);
-});
+}); --}}
 
+
+{{!-- 
+survey.onComplete = function(survey) {
+  //save my data on the server
+  window.location.href = "results";
+} --}}
 survey.data = {
  
 };
@@ -206,6 +208,8 @@ $("#surveyElement").Survey({model: survey, onValueChanged: surveyValueChanged});
     })
 
         </script>
+
+
  
             {{!-- <div class="buttons">
                 <ul id="btn0" class="butn btn-warning" style="padding: 20px; width: auto;"><li id="choice0"></li></ul>
